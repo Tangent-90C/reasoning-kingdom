@@ -29,7 +29,7 @@ const members = [
   {
     avatar: 'https://www.github.com/lizixi-0x2F.png',
     name: '李籽溪（兔狲）',
-    title: '项目负责人',
+    title: '项目负责人/笔者',
     links: [
       { icon: 'github', link: 'https://github.com/lizixi-0x2F' },
     ]
