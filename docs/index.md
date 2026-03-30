@@ -7,7 +7,7 @@ hero:
   text: "一本关于AI推理机制的开源教程"
   tagline: 从熵增到边界，追问智能的本质
   image:
-    src: /ReasoningKingdom.png
+    src: ReasoningKingdom.png
     alt: 推理王国
   actions:
     - theme: brand
