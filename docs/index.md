@@ -11,16 +11,22 @@ hero:
     alt: 推理王国
   actions:
     - theme: brand
-      text: 开始阅读
+      text: 导读
       link: /preface
+    - theme: brand
+      text: 上卷：推理的历史演变
+      link: /volume1/chapter1/
+    - theme: alt
+      text: 下卷：推理的形式演绎
+      link: /volume2/chapter14/
 
 features:
-  - title: 🧠 深度
-    details: 从信息论、符号逻辑到Transformer，系统性剖析AI推理的底层机制
-  - title: 🎁 免费
-    details: 全部内容开源，无任何形式收费
-  - title: 🌐 开源
-    details: 教程源文件托管在GitHub，欢迎贡献与反馈
+  - title: 上卷（第1–13章）
+    details: 从熵增到边界，沿历史线索追问推理的本质——符号主义、统计学派、Transformer、搜索与因果
+  - title: 下卷（第14–22章）
+    details: 从形式系统出发，用逻辑演绎重建推理王国——一致性、线性逻辑、概率、因果、复杂度、自指
+  - title: 开源免费
+    details: 全部内容开源，源文件托管在 GitHub，欢迎贡献与反馈
 ---
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'

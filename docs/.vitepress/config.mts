@@ -14,7 +14,10 @@ export default defineConfig({
   },
   themeConfig: {
     logo: '/datawhale-logo.png',
-    nav: [],
+    nav: [
+      { text: '上卷：科普叙事', link: '/volume1/chapter1/' },
+      { text: '下卷：形式演绎', link: '/volume2/chapter14/' },
+    ],
     search: {
       provider: 'local',
       options: {
@@ -36,28 +39,56 @@ export default defineConfig({
         }
       }
     },
-    sidebar: [
-      {
-        items: [
-          { text: '导读', link: '/preface' },
-          { text: '第1章：对抗熵增——推理作为存活策略', link: '/chapter1/' },
-          { text: '第2章：符号的黎明——因果的第一次建模', link: '/chapter2/' },
-          { text: '第3章：从符号到向量——表示空间的第一次解放', link: '/chapter3/' },
-          { text: '第4章：流形假设——高维数据的隐秩序', link: '/chapter4/' },
-          { text: '第5章：拟合的陷阱——统计相关性不是推理', link: '/chapter5/' },
-          { text: '第6章：因果的边界——观测数据永远不够', link: '/chapter6/' },
-          { text: '第7章：复杂度的真相：不是快慢，是结构', link: '/chapter7/' },
-          { text: '第8章：启发式的契约：接受"差不多对"需要多少勇气', link: '/chapter8/' },
-          { text: '第9章：Transformer：动态拓扑的注意力革命', link: '/chapter9/' },
-          { text: '↳ 番外篇：注意力即因果', link: '/chapter9/bonus' },
-          { text: '第10章：搜索的艺术：在推理空间中巡航', link: '/chapter10/' },
-          { text: '第11章：效能化推理：算法的经济学', link: '/chapter11/' },
-          { text: '第12章：隐式推理：神经网络的内部独白', link: '/chapter12/' },
-          { text: '第13章：推理的边界——以及我们为什么必须接受它', link: '/chapter13/' },
-          { text: '第13章番外篇：暗线', link: '/chapter13/bonus' },
-        ]
-      }
-    ],
+    sidebar: {
+      '/volume1/': [
+        {
+          text: '上卷：推理的历史叙事',
+          items: [
+            { text: '导读', link: '/preface' },
+            { text: '第1章：对抗熵增——推理作为存活策略', link: '/volume1/chapter1/' },
+            { text: '第2章：符号的黎明——因果的第一次建模', link: '/volume1/chapter2/' },
+            { text: '第3章：从符号到向量——表示空间的第一次解放', link: '/volume1/chapter3/' },
+            { text: '第4章：流形假设——高维数据的隐秩序', link: '/volume1/chapter4/' },
+            { text: '第5章：拟合的陷阱——统计相关性不是推理', link: '/volume1/chapter5/' },
+            { text: '第6章：因果的边界——观测数据永远不够', link: '/volume1/chapter6/' },
+            { text: '第7章：复杂度的真相：不是快慢，是结构', link: '/volume1/chapter7/' },
+            { text: '第8章：启发式的契约：接受"差不多对"需要多少勇气', link: '/volume1/chapter8/' },
+            { text: '第9章：Transformer：动态拓扑的注意力革命', link: '/volume1/chapter9/' },
+            { text: '↳ 番外篇：注意力即因果', link: '/volume1/chapter9/bonus' },
+            { text: '第10章：搜索的艺术：在推理空间中巡航', link: '/volume1/chapter10/' },
+            { text: '第11章：效能化推理：算法的经济学', link: '/volume1/chapter11/' },
+            { text: '第12章：隐式推理：神经网络的内部独白', link: '/volume1/chapter12/' },
+            { text: '第13章：推理的边界——以及我们为什么必须接受它', link: '/volume1/chapter13/' },
+            { text: '↳ 番外篇：暗线', link: '/volume1/chapter13/bonus' },
+          ]
+        }
+      ],
+      '/volume2/': [
+        {
+          text: '下卷：推理的形式演绎',
+          items: [
+            { text: '第14章：形式系统——推理的语法', link: '/volume2/chapter14/' },
+            { text: '第15章：一致性与完备性——形式系统的两堵墙', link: '/volume2/chapter15/' },
+            { text: '第16章：线性逻辑与资源——每个假设只能用一次', link: '/volume2/chapter16/' },
+            { text: '第17章：概率作为逻辑的扩张——真值从 {0,1} 到 [0,1]', link: '/volume2/chapter17/' },
+            { text: '第18章：因果结构的形式化——三层阶梯与 do-calculus', link: '/volume2/chapter18/' },
+            { text: '第19章：复杂度作为推理的几何——问题的内在结构', link: '/volume2/chapter19/' },
+            { text: '第20章：启发式的形式合同——"差不多对"的精确定义', link: '/volume2/chapter20/' },
+            { text: '第21章：学习作为逆推断——泛化是压缩的另一种说法', link: '/volume2/chapter21/' },
+            { text: '第22章：自指与涌现——当推理系统推理关于自身', link: '/volume2/chapter22/' },
+          ]
+        }
+      ],
+      '/': [
+        {
+          items: [
+            { text: '导读', link: '/preface' },
+            { text: '上卷：推理的历史叙事 →', link: '/volume1/chapter1/' },
+            { text: '下卷：推理的形式演绎 →', link: '/volume2/chapter14/' },
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lizixi-0x2F/ReasoningKingdom' }
