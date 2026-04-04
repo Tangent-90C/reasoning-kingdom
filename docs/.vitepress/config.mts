@@ -91,11 +91,11 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/lizixi-0x2F/ReasoningKingdom' }
+      { icon: 'github', link: 'https://github.com/datawhalechina/reasoning-kingdom/' }
     ],
 
     editLink: {
-      pattern: 'https://github.com/lizixi-0x2F/ReasoningKingdom/blob/main/docs/:path'
+      pattern: 'https://github.com/datawhalechina/reasoning-kingdom/blob/main/docs/:path'
     },
 
     footer: {
