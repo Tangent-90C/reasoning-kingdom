@@ -520,6 +520,7 @@ Matchup B: MCTS(X) vs Planner(O)  — MCTS moves first
 ### 8.4 自己动手：运行井字棋对战
 
 ```bash
+git clone https://github.com/lizixi-0x2f/CocDo.git
 cd CocDo
 python examples/demo_tictactoe.py --games 20 --rollouts 200
 ```
