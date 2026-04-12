@@ -108,10 +108,10 @@
 
 ## 四章导航
 
-1. **[微积分入门](/academy/calculus/)** - 从导数到微分方程
-2. **[线性代数入门](/academy/linear-algebra/)** - 从向量到雅可比矩阵
-3. **[西方近代以前哲学入门](/academy/philosophy/)** - 从古希腊到1840年批判视角，再到新哲学的企望
-4. **[Python编程语法入门](/academy/python/)** - 从变量到数据科学应用
+1. **[微积分入门](/dear-reasoner/academy/calculus/)** - 从导数到微分方程
+2. **[线性代数入门](/dear-reasoner/academy/linear-algebra/)** - 从向量到雅可比矩阵
+3. **[西方近代以前哲学入门](/dear-reasoner/academy/philosophy/)** - 从古希腊到1840年批判视角，再到新哲学的企望
+4. **[Python编程语法入门](/dear-reasoner/academy/python/)** - 从变量到数据科学应用
 
 ---
 
