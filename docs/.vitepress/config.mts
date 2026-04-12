@@ -16,6 +16,7 @@ export default defineConfig({
     logo: '/datawhale-logo.png',
     nav: [
       { text: '推理地图', link: '/map' },
+      { text: '前传：推理科学入门', link: '/dear-reasoner/' },
       { text: '上卷：科普叙事', link: '/preface' },
       { text: '下卷：形式演绎', link: '/volume2/preface/' },
       { text: '兔狲教授小词典', link: '/dictionary' },
@@ -42,6 +43,62 @@ export default defineConfig({
       }
     },
     sidebar: {
+       '/dear-reasoner/': [
+        {
+          text: '前传：推理科学入门',
+          items: [
+            { text: '首页', link: '/dear-reasoner/' },
+            { text: '前言', link: '/dear-reasoner/preface' },
+            {
+              text: '第一部分：确定性的宇宙',
+              items: [
+                { text: '第1章：电报、手电筒与逻辑的起点', link: '/dear-reasoner/volume1/chapter1/' },
+                { text: '第2章：当资源有了边界（复杂度）', link: '/dear-reasoner/volume1/chapter2/' },
+                { text: '第3章：图灵的纸带（可计算性）', link: '/dear-reasoner/volume1/chapter3/' },
+                { text: '第4章：线性的智慧（遍历与搜索）', link: '/dear-reasoner/volume1/chapter4/' },
+                { text: '第5章：贪心的诱惑（局部最优）', link: '/dear-reasoner/volume1/chapter5/' },
+                { text: '第6章：启发的艺术（近似与估测）', link: '/dear-reasoner/volume1/chapter6/' },
+                { text: '第7章：记忆的力量（动态规划）', link: '/dear-reasoner/volume1/chapter7/' },
+              ]
+            },
+            {
+              text: '第二部分：跨越逻辑的断裂带',
+              items: [
+                { text: '第8章：规则的黄昏', link: '/dear-reasoner/volume2/chapter8/' },
+                { text: '第9章：从离散到连续：数学的魔法棒', link: '/dear-reasoner/volume2/chapter9/' },
+              ]
+            },
+            {
+              text: '第三部分：神经网络的涌现',
+              items: [
+                { text: '第10章：最简单的感知（神经元）', link: '/dear-reasoner/volume3/chapter10/' },
+                { text: '第11章：错误是进步的阶梯（反向传播）', link: '/dear-reasoner/volume3/chapter11/' },
+                { text: '第12章：记忆的链条（LSTM与RNN）', link: '/dear-reasoner/volume3/chapter12/' },
+                { text: '第13章：遗忘与因果的较量', link: '/dear-reasoner/volume3/chapter13/' },
+                { text: '第14章：注意力：在这个嘈杂的世界里，该看哪？', link: '/dear-reasoner/volume3/chapter14/' },
+                { text: '第15章：编码-解码堆栈（Transformer）', link: '/dear-reasoner/volume3/chapter15/' },
+              ]
+            },
+            {
+              text: '第四部分：通往推理王国',
+              items: [
+                { text: '第16章：什么是真正的推理？（LLM迷思）', link: '/dear-reasoner/volume4/chapter16/' },
+                { text: '第17章：推理科学家的工具箱', link: '/dear-reasoner/volume4/chapter17/' },
+                { text: '第18章：致20岁后的你：作为科学的推理', link: '/dear-reasoner/volume4/chapter18/' },
+              ]
+            },
+            {
+              text: '兔狲学院',
+              items: [
+                { text: '微积分：从函数到微分方程', link: '/dear-reasoner/academy/calculus/' },
+                { text: '线性代数：从向量到雅可比矩阵', link: '/dear-reasoner/academy/linear-algebra/' },
+                { text: '哲学：从古希腊到1840年', link: '/dear-reasoner/academy/philosophy/' },
+                { text: 'Python编程：从语法到数据结构', link: '/dear-reasoner/academy/python/' },
+              ]
+            }
+          ]
+        }
+      ],
        '/volume1/': [
         {
           text: '上卷：推理的历史叙事',
@@ -92,6 +149,7 @@ export default defineConfig({
           items: [
             { text: '推理王国地图', link: '/map' },
             { text: '导读', link: '/preface' },
+            { text: '前传：推理科学入门 →', link: '/dear-reasoner/' },
             { text: '兔狲教授小词典', link: '/dictionary' },
             { text: '上卷：推理的历史叙事 →', link: '/volume1/chapter1/' },
             { text: '下卷：推理的形式演绎 →', link: '/volume2/chapter14/' },

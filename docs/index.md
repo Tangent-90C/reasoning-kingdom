@@ -14,6 +14,9 @@ hero:
       text: 推理王国地图
       link: /map
     - theme: alt
+      text: 前传：推理科学入门
+      link: /dear-reasoner/
+    - theme: alt
       text: 上卷：推理的历史演变
       link: /preface
     - theme: alt
@@ -21,6 +24,8 @@ hero:
       link: /volume2/preface/
 
 features:
+  - title: 前传（第1–18章）
+    details: 面向青少年和业余读者的推理科学入门，从布尔逻辑到Transformer，建立算法思维与神经网络认知
   - title: 上卷（第1–13章）
     details: 从熵增到边界，沿历史线索追问推理的本质——符号主义、统计学派、Transformer、搜索与因果
   - title: 下卷（第14–22章）
