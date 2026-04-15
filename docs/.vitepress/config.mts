@@ -46,7 +46,7 @@ export default defineConfig({
     nav: [
       { text: '推理地图', link: '/map' },
       { text: '前传：推理科学入门', link: '/dear-reasoner/preface' },
-      { text: '上卷：科普叙事', link: '/volume1/preface/' },
+      { text: '上卷：推理叙事', link: '/volume1/preface/' },
       { text: '下卷：形式演绎', link: '/volume2/preface/' },
       { text: '兔狲学院', link: '/dear-reasoner/academy/' },
       { text: '兔狲教授小词典', link: '/dictionary' },
