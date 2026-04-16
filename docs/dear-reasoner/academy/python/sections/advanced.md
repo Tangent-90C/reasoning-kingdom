@@ -314,11 +314,11 @@ even_squares = [n ** 2 for n in numbers if n % 2 == 0]
 print("偶数的平方:", even_squares)
 
 # 4. 字典推导式和集合推导式
-print("\n字典推导式和集合推导式：")
+print("\n字典推导式和集合推导式：)
 
 # 字典推导式
 square_dict = {n: n ** 2 for n in numbers}
-print("数字平方字典:", square_dict)
+print(数字平方字典:", square_dict)
 
 # 集合推导式（自动去重）
 numbers_with_duplicates = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
@@ -351,10 +351,10 @@ for i, num in enumerate(big_numbers):
     print(num, end=" ")
 
 # 6. 装饰器
-print("\n\n装饰器：")
+print("\n\n装饰器：)
 
 def timer_decorator(func):
-    """计时装饰器"""
+    ""计时装饰器"""
     import time
     
     def wrapper(*args, **kwargs):
