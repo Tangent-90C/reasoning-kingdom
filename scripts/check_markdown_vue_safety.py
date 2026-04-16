@@ -14,6 +14,7 @@ HTML_PREFIXES = (
     "<!--",
     "<!DOCTYPE",
     "</",
+    "<=",
     "<div",
     "<br",
     "<figure",
@@ -32,6 +33,9 @@ HTML_PREFIXES = (
     "<summary",
     "<sup",
     "<sub",
+    "<http",
+    "<https",
+    "<mailto",
 )
 
 
@@ -102,11 +106,6 @@ def find_unsafe_angles(text: str) -> list[int]:
         if text[idx - 1] == "\\":
             continue
 
-        prev_char = text[idx - 1]
-        next_char = text[idx + 1]
-        if prev_char.isspace() or next_char.isspace():
-            continue
-
         indices.append(idx)
     return indices
 
@@ -118,6 +117,7 @@ def main() -> int:
         rel_path = path.relative_to(REPO_ROOT)
         in_fence = False
         fence_marker: str | None = None
+        in_math_block = False
 
         for line_no, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
             stripped = raw_line.lstrip()
@@ -135,6 +135,16 @@ def main() -> int:
             if in_fence:
                 continue
 
+            if stripped.startswith("$$"):
+                in_math_block = not in_math_block
+                continue
+
+            if in_math_block:
+                continue
+
+            if raw_line.startswith("    ") or raw_line.startswith("\t"):
+                continue
+
             candidate_line = strip_inline_math(strip_inline_code(raw_line))
             if find_unsafe_angles(candidate_line):
                 failures.append((rel_path, line_no, raw_line.rstrip()))
@@ -143,7 +153,7 @@ def main() -> int:
         print("Markdown Vue safety check passed.")
         return 0
 
-    print("Unsafe '<' usage found in Markdown prose. Add spaces around comparisons, for example '0 < k < 1'.")
+    print("Unsafe '<' usage found in Markdown prose. Escape it as '&lt;' or move the expression into code/math syntax.")
     for rel_path, line_no, content in failures:
         print(f"{rel_path}:{line_no}: {content}")
     return 1
