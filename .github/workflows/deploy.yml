@@ -42,18 +42,21 @@ jobs:
           node-version: 24
           cache: npm # 或 pnpm / yarn
       - name: Setup Pages
+        if: github.event.repository.fork == false
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm install --legacy-peer-deps
       - name: Build with VitePress
         run: npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
+        if: github.event.repository.fork == false
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
 
   # 部署工作
   deploy:
+    if: github.event.repository.fork == false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
