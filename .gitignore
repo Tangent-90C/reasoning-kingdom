@@ -2,7 +2,8 @@ node_modules/
 docs/.vitepress/dist
 docs/.vitepress/cache
 .DS_Store
-scripts/
+scripts/*
+!scripts/check_markdown_vue_safety.py
 .claude/
 package-lock.json
 backup/

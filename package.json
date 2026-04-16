@@ -8,7 +8,8 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:check-md": "python3 scripts/check_markdown_vue_safety.py",
+    "docs:build": "npm run docs:check-md && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "export-pdf": "press-export-pdf export docs"
   },
